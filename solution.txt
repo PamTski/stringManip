@@ -1,0 +1,28 @@
+#1-Populate():
+DOG             NEKO            CAT             
+HELLO           GOODBYE         WELCOME         
+GREEN           RED             BLUE            
+CODE            PROGRAMMER      SYNTAX          
+
+#2-Search():
+FOUND: SYNTAX 3 2
+NOT-FOUND: ZZZ -1 -1
+FOUND: WELCOME 1 2
+
+#3-Transpose():
+DOG             HELLO           GREEN           CODE            
+NEKO            GOODBYE         RED             PROGRAMMER      
+CAT             WELCOME         BLUE            SYNTAX          
+
+#4-Filter():
+-DOG-           +NEKO+          -CAT-           
++HELLO+         +GOODBYE+       +WELCOME+       
+-GREEN-         -RED-           -BLUE-          
++CODE+          +PROGRAMMER+    -SYNTAX-        
+
+#5-RowSort():
+CAT             DOG             NEKO            
+GOODBYE         HELLO           WELCOME         
+BLUE            GREEN           RED             
+CODE            PROGRAMMER      SYNTAX          
+
