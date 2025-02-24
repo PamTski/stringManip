@@ -54,16 +54,14 @@ Objective: Find all the word in the table that contains the letters in the `filt
 ![](WriteupPics/FilterLoop.png)
 > Figure: this is the loop to access each needed area
 
-The first two loop declaratiosn access the rows and columns of matrix m, they are so that we can access each word of that table. 
+The first two loop declarations iterate over the rows and columns of matrix m, allowing access to each word within the table.
+Note that filter is a pointer (*filter), which indicates that it is most likely a string. Since the filter consists of multiple letters, we must iterate through each character to perform the necessary comparisons. Detecting  Mechanism and counter
 
-Note that filter is a `*filter` this is a pointer, this means that it is most likely a string, we are dealing with filters with more than one letter to check, this means we have to loop through each letter to comapre it
-
-#### Detecting  Mechanism and counter
 > For succeeding explanations, assume `*filter` is **"EO"** and all words are **UPPERCASE**
 
-We have two detection counters, `per_letter` & `per_word`. Since the word, may contain one of the filter letters multiple times like "Green", it may create instances with a false positive as E occurs twice in the word giving the expression that the two letter filter is met. To avoid this, we count the instance of multiple letters as one, so when 'E' appears twice in **"Green"** it may run up the `per_letter` variable twice it will only count up the `per_word` variable once. 
-
-At the end the `per_word` is what is evaluated. At the end, for it to pass, `per_word` must be equal to the string length of `*filter`. **Each letter of the `*filter` string must appear once in the word to pass**
+We have two detection counters: per_letter and per_word. Since a word may contain multiple occurrences of a filtered letter (e.g., "Green" contains 'E' twice), this can lead to false positives by incorrectly suggesting that the letter-based filter condition is met multiple times.
+To mitigate this, we count each unique occurrence of a filter letter within a word only once. While per_letter may increment multiple times for repeated letters, per_word will only increase once per distinct letter found in the word.
+In the final evaluation, per_word determines whether the word meets the filter criteria. For the word to pass, per_word must be equal to the length of the *filter string—ensuring that each letter in *filter appears at least once in the word.
 
 #### Marking Mechanism
 ![](WriteupPics/FilterMark.png)
