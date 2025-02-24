@@ -50,7 +50,8 @@ A simple loop just switches the two.
 
 ## Filter
 Objective: Find all the word in the table that contains the letters in the `filter` string. If the word contains it add `+` to the start and end of the word, and if not add `-`. Example `+HELLO+` or `-GREEN-`
-![](WriteupPIcs/Filterloop.png)
+
+![](WriteupPics/FilterLoop.png)
 > Figure: this is the loop to access each needed area
 
 The first two loop declaratiosn access the rows and columns of matrix m, they are so that we can access each word of that table. 
