@@ -37,7 +37,7 @@
     TO DO: change the #include below to your own file/solution. For example if your 
 	lastname is SANTOS, then it should be changed to #include SANTOS-PRACTICE.c
 */	
-#include "LASTNAME-PRACTICE.c"
+#include "solution.c"
 
 #include "test_functions.c"		// read/understand the contents of this C file
 
