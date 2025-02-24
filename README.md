@@ -5,7 +5,7 @@ By: Philip Martin Antolihao
 
 ## Populate function
 ![](WriteupPics/Populate.png)
-> Why pointers? this because we need to return two values, usual functions can only return two.  
+> Why pointers? this because we need to return two values, usual functions can only return one.  
 
 This function takes the data of for the number of rows and the number of columns for the table of strings. This means that our table could end up being much smaller than what was dictated in the `Matrix` type definition although note that it does dictate its maximum size
  
