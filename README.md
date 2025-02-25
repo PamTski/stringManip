@@ -1,7 +1,7 @@
 # _String Manipulation_  
 February 10, 2024	
 By: Philip Martin Antolihao
-> This program uses the `INPUT.txt` file to automate testing. read the README file to know what each is for.
+> This program uses the `INPUT.txt` file to automate testing. The order of input is determined by the uneditable `main.c` file there is no need to worry about it. 
 
 ## Populate function
 ![](WriteupPics/Populate.png)
@@ -71,9 +71,34 @@ This is just a simple concatenate snippet where it adds a string next to another
  "-" respectively. 
  
  I guess its also important that this new string is copied from the temp var to the new and final location of the same index as the `Matrix M` but now in `Matrix T`
+ 
+## Row Sort 
+**Objective:** Transform matrix `M` into a sorted matrix `T`, where each row is arranged in alphabetical order.
+> Skip the first two explanations if you have a good understanding of bubble sort and `strcmp()`
+
+#### Bubble Sort
+
+Before proceeding, it is essential to understand the **Bubble Sort** algorithm, as it is the method used to sort the words in each row of matrix `M`.  
+
+**Bubble Sort** works by repeatedly iterating through a list and comparing adjacent elements. If two adjacent elements are out of order, they are swapped. This process continues, passing through the list multiple times until no more swaps are needed, indicating that the list is sorted.  
+
+For each pass, the largest (or smallest, depending on the order) element moves to its correct position, similar to how bubbles rise to the surface—hence the name *Bubble Sort*. The algorithm continues until the entire row is sorted in alphabetical order.
+
+#### Understanding the strcmp() Function
+The `strcmp()` function is a fundamental tool in programming used to compare two strings. It plays a crucial role in tasks such as sorting words, checking for equality, and determining the relative order of text-based data.
+At its core, `strcmp()` operates by comparing two strings character by character. Beginning with the first character of each string, it continues to examine subsequent characters until it encounters a difference or reaches the end of both strings. If the characters in both strings match completely, the function confirms that they are identical. However, if a difference is found, it determines which string is lexicographically (alphabetically) greater or smaller based on the numerical values of their characters.
+This comparison method is particularly useful in scenarios such as dictionary sorting, where words must be arranged in a specific order, or in authentication systems, where user input needs to be validated against stored data. By efficiently analyzing strings, `strcmp()` enables programmers to handle text-based information in a structured and logical manner.
 
 
+#### Transfering `Matrix M` to `Matrix T`
+![](WriteupPics/RowSortTransfer.png)
+We are tasked to hold the sorted row in a seperate table, I understand bubble sort more when its using one table so before everything, I transfered everything into `Matrix T` unsorted.
 
 
+#### Bubble Sort and `strcmp()` integeration 
+![](WriteupPics/RowSortBubble.png)
 
+`strcmp()` in our previous porjects was only used for inequality to check if two strings are the same. However, we can use it for determining which word is alphabetically first using **lexicographical** comparison
+
+assume: `strcmp(string a, string b)` this function (assuming that they are not equal) would either return **n > 0** or **n < 0** where n is of the `int` data type. When **n > 0**: `string a` is greater than `sring b`. `string a` should be after `string b` and **n < 0** means that `string b` is greater than `string a` now in my snippet of code this means that the swap happens when **n > 0**. 
 
